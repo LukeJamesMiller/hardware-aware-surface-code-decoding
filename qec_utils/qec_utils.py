@@ -1,20 +1,3 @@
-"""Rotated surface code: geometry, stabilizers, and a picture of it.
-
-Shared by the notebooks in this repo so they don't each rebuild the code.
-
-Coordinates follow Stim's surface_code:rotated_memory_*, so the geometry here can
-be compared against a generated circuit directly:
-
-    data qubits    (2i+1, 2j+1)
-    check ancillas even-even sites, acting on whichever of their four diagonal
-                   neighbours (x+-1, y+-1) actually exist
-    check type     X where (x+y)/2 is odd, Z where it's even
-    which ancillas weight-4 checks always; weight-2 checks only where the type
-                   matches the boundary -- X top and bottom, Z left and right
-
-Checked against Stim's generated circuits at d = 3, 5 and 7.
-"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
