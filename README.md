@@ -13,15 +13,14 @@ This repository measures what gets lost, then tries to recover it.
 
 ## Status
 
-| Notebook | Question | State |
-| --- | --- | --- |
-| [01 — Code and detectors](01_code_and_detectors.ipynb) | What does a decoder actually see? | **complete** |
-| 02 — Calibration noise and MWPM | Does realistic heterogeneity change the baseline? | not started |
-| 03 — Correlated decoding | Can a small model recover what decomposition discarded? | not started |
+| Notebook | Question |
+| --- | --- | 
+| [1 — Code and detectors](code_and_detectors.ipynb) | What does a decoder actually see? |
+| 02 — Calibration noise and MWPM | Does realistic heterogeneity change the baseline? | 
+| 03 — Correlated decoding | Can a small model recover what decomposition discarded? |
 
-Design and pre-registered scope: [`EXPERIMENTAL_PLAN.md`](EXPERIMENTAL_PLAN.md).
 
-## What notebook 01 establishes
+## What notebook 1 establishes
 
 Uniform circuit-level noise at `p = 0.005`, logical-`Z` memory, `rounds = d`.
 Every number below is in [`results/detector_model_facts.csv`](results/detector_model_facts.csv).
