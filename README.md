@@ -55,29 +55,4 @@ Point 4 is a lower bound, set by the least capable model available.
 
 ![Predicting MWPM's mistakes from bits it never reads](figures/discarded_information.png)
 
-## Running it
 
-These notebooks are written to run in a browser — Colab, Kaggle, anywhere with a
-Python kernel. Nothing is assumed to be checked out locally and nothing needs
-installing on your machine: the first cell `pip install`s `stim` and `pymatching`
-and `curl`s `qec_utils.py` out of this repo. Open in Colab and run top to bottom,
-about a minute.
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LukeJamesMiller/surface-code-correlated-decoding/blob/main/01_code_and_detectors.ipynb)
-
-`qec_utils.py` holds the rotated surface-code construction and the geometry plot,
-because all three notebooks need them. Everything else — the fault injection, the
-error-model parsing, the blinding and AUC experiments — is written in the notebook
-that uses it, where you can read it.
-
-## What this is not
-
-- **No hardware run.** Simulation only. Notebook 02 uses a frozen IBM calibration
-  snapshot as a source of realistic per-qubit error rates, not as a layout target:
-  the heavy-hex lattice has degree 3 and rotated-code ancillas need degree 4, so this
-  circuit does not run on that device without routing. That is asserted in the
-  notebook rather than mentioned in a caveat.
-- **No threshold estimate**, and no claim beyond the distances and noise settings tested.
-- **No claim of a large win.** Correlated decoding is a known idea and published gains
-  are modest — on the order of 10% in effective distance. Nothing measured here
-  predicts more than that. It predicts something *measurable*, which is the point.
